@@ -1,8 +1,11 @@
 import React from 'react';
+import { FaFacebookF, FaInstagram, FaListAlt, FaTripadvisor } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiFilter } from "react-icons/hi";
+import { TbApps } from "react-icons/tb";
 import video from '../../mediaFiles/SeaBg.mp4';
 import './home.css';
+
 
 const Home = () => {
    return (
@@ -48,6 +51,17 @@ const Home = () => {
                <span>MORE FILTERS</span>
                </div>
 
+            </div>
+            <div className="homeFooterIcons flex">
+               <div className="rightIcons">
+               <FaFacebookF  className="icon"/>
+               <FaInstagram  className="icon"/>
+               <FaTripadvisor  className="icon"/>
+               </div>
+               <div className="leftIcons">
+               <FaListAlt  className="icon"/>
+               <TbApps  className="icon"/>
+               </div>
             </div>
          </div>
       </section>
