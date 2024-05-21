@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaFacebookF, FaInstagram, FaListAlt, FaTripadvisor } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiFilter } from "react-icons/hi";
@@ -6,23 +6,31 @@ import { TbApps } from "react-icons/tb";
 import video from '../../mediaFiles/SeaBg.mp4';
 import './home.css';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+   useEffect(()=>{
+      Aos.init({duration: 2000})
+   },[])
+
+
+
    return (
       <section className="home">
          <div className="overlay"></div>
             <video src={video} muted autoPlay loop type="video/mp4"></video>
          <div className="homeContent container">
             <div className="textDiv">
-               <span className="smallText">
+               <span data-aos="fade-up"  className="smallText">
                   Our Packages
                </span>
-               <h1 className="homeTitle">
+               <h1 data-aos="fade-up" className="homeTitle">
                   Search you Holiday
                </h1>
 
             </div>
-            <div className="cardDiv grid">
+            <div data-aos="fade-up" className="cardDiv grid">
                <div className="destinationInput">
                   <label htmlFor="city">Search your destination:</label>
                   <div className="input flex">
@@ -52,7 +60,7 @@ const Home = () => {
                </div>
 
             </div>
-            <div className="homeFooterIcons flex">
+            <div data-aos="fade-up" className="homeFooterIcons flex">
                <div className="rightIcons">
                <FaFacebookF  className="icon"/>
                <FaInstagram  className="icon"/>

@@ -151,4 +151,62 @@
 }
 .home .homeContent .homeFooterIcons .icon:hover {
   color: var(--PrimaryColor);
+}
+
+@media (min-width: 550px) {
+  .home .homeContent .textDiv .smallText {
+    font-size: 16px;
+  }
+  .home .homeContent .textDiv .homeTitle {
+    position: relative;
+    font-size: 2.3rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .home .homeContent .textDiv .homeTitle::after {
+    position: absolute;
+    content: "";
+    background: var(--SecondaryColor);
+    height: 5px;
+    width: 145px;
+    right: 0;
+    bottom: 5px;
+    z-index: -1;
+  }
+  .home .homeContent .cardDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 660px) {
+  .home .homeContent .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 940px) {
+  .home {
+    height: 75vh;
+  }
+}
+@media (min-width: 1240px) {
+  .home {
+    height: 90vh;
+  }
+  .home .homeContent {
+    padding: auto 0px;
+  }
+  .home .homeContent .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home .homeContent .cardDiv .input {
+    margin-bottom: 1rem;
+  }
+  .home .homeContent .cardDiv .searchOptions {
+    bottom: -1rem;
+    padding: 8px 1rem;
+  }
+  .home .homeContent .cardDiv .searchOptions span {
+    font-size: 17px;
+  }
 }/*# sourceMappingURL=home.css.map */

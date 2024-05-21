@@ -23,6 +23,9 @@ body{
    --bodyColor:rgb(240,240,246);
    --cardBG:rgb(225,225,235);
 }
+html{
+   scroll-behavior:smooth ;
+}
 a{
    text-decoration: none;
 }
@@ -69,4 +72,19 @@ img,video{
 }
 input{
    font-size: 100%;
+}
+/* media */
+@media(min-width:1240px){
+   .container{
+      width: 80% !important;
+      margin: auto !important;
+   }
+   .section{
+   right: 6rem 0 4rem;
+   }
+}
+@media(min-width:2560px){
+   body{
+      zoom: 1.7;
+   }
 }
